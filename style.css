@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:ital,wght@1,300&display=swap');
+
+:root {
+    --done-color: #6EC9D1;
+    --delete-color: #CE75BA;
+    --secondary-color: #7554C2;
+}
+
+.container-div {
+    background-color: rgba(26, 18, 18, 0.164);
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    text-align: center;
+    border-radius: 10px;
+    padding: 30px;
+    margin: auto;
+    margin-top: 5%;
+    
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Popins", sans-serif;
+    background-image: linear-gradient(to bottom right, red, yellow);
+    
+    min-height: 100vh;
+    color: white;
+    
+}
+
+
+header {
+    font-size: 22px;
+}
+
+header, form {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    min-height: 13vh;
+}
+
+form input, form button {
+    padding: 2px;
+    font-size: 25px;
+    border: none;
+    background: whitesmoke;
+    
+}
+
+form button {
+    color: var(--secondary-color);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: var(--secondary-color);
+    color: whitesmoke;
+}
+
+.todo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* styling lists - todo items */
+.todo-list {
+    list-style: none;
+    min-width: 40%;
+}
+
+.todoDiv {
+    margin: 0.4rem;
+    background-color: whitesmoke;
+    font-size: 15px;
+    color: var(--secondary-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.5s ease;
+}
+
+.todoDiv li{
+    flex: 1;
+}
+
+.delete-btn,
+.completed-btn {
+    color: whitesmoke;
+    border: none;
+    padding: 0.5rem;
+    cursor: pointer;
+    font-size: 1rem;
+    background-color: var(--delete-color);
+}
+
+.completed-btn {
+    background-color: var(--done-color);
+}
+
+.todo-item {
+    padding: 0rem 0.5rem;
+}
+
+.fall {
+    transform: translateY(8rem) rotateZ(20deg);
+    opacity: 0;
+}
+
+.completed {
+    text-decoration: line-through;
+    background-color: #a9fd2a;
+    opacity: 0.8;
+}
+
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    border: none;
+    color: var(--secondary-color);
+    width: 10rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    font-size: 15px;
+    background-color: whitesmoke;
+}
+
+.select {
+    margin: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.select::after {
+    content: "\25BC";
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    background-color: var(--secondary-color);
+    padding: 8px;
+    pointer-events: none;
+}
+
+.select:hover::after {
+    background-color: whitesmoke;
+    color: var(--secondary-color);
+}
+
+.fa-trash,
+.fa-check {
+    pointer-events: none;
+}
+
+
+.alert {
+    text-align: center;
+    font-size: 25px;
+    border: solid 1px rgba(0, 0, 0, 0.425);
+    border-radius: 10px;
+    background-color: rgba(26, 18, 18, 0.164);
+    width: 30%;
+    padding: 10px 0px;
+    margin: auto;
+    margin-top: 5px;
+    visibility: hidden;
+}
+
+.success {
+    text-align: center;
+    font-size: 25px;
+    border: solid 1px rgba(0, 0, 0, 0.425);
+    border-radius: 10px;
+    background-color: rgba(26, 18, 18, 0.164);
+    width: 30%;
+    padding: 10px 0px;
+    margin: auto;
+    margin-top: 5px;
+    color: rgb(183, 255, 132);
+}
